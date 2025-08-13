@@ -22,4 +22,8 @@ app.use('/api/image', imageRouter)
 
 app.get('/',(req,res)=>res.send("API Working "))
 
+if(process.env.NODE_ENV  !== "production"){
 app.listen(PORT,()=> console.log('server running on port  ' + PORT))
+}
+
+export default server;
